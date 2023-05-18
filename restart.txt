@@ -1,0 +1,14 @@
+public void restart (View view){
+        GridLayout gridLayout=findViewById(R.id.gridlayout);
+        int total_images=gridLayout.getChildCount();
+        for(int i=0;i<total_images;i++) {
+            ImageView v = (ImageView) gridLayout.getChildAt(i);
+            v.setImageDrawable(null);
+        }
+        isWinner=false;
+        imageClicked=-1;
+        player=1;
+        Arrays.fill(gameState, -1);
+
+
+    }
